@@ -30,6 +30,9 @@ public class Magasin {
 			System.out.println("Marque: " + article.marque);
 			System.out.println("Intitulé: " + article.intitule);
 			System.out.println("Prix par jour de location: " + article.prixLocJour);
+			System.out.println("\n");
+			System.out.println("<------------------------------------------------------>");
+			System.out.println("\n");
 		}
 		
 		
