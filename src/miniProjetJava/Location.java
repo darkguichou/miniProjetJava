@@ -1,6 +1,7 @@
 package miniProjetJava;
 
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 import java.util.ArrayList;
 
 public class Location {
@@ -44,9 +45,17 @@ public class Location {
 
 	public float calculerMontant(){
 
+		float montant = 0;
+		
+		long diff = dateFin.getTime() - dateDebut.getTime() + TimeUnit.MILLISECONDS.convert(1, TimeUnit.DAYS);
+		
 
-
-		return 0;
+		for (Article article : articles) {
+			
+			montant += article.prixLocJour * TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+		}
+		
+		return montant;
 
 	}
 	
@@ -55,7 +64,7 @@ public class Location {
 		
 	public void afficher(){
 		
-		System.out.println("Date de début: " + dateDebut + "Date de fin: " + dateFin);
+		System.out.println("Date de début: " + dateDebut + "Date de fin: " + dateFin + "Montant: " +this.calculerMontant());
 	}
 
 
