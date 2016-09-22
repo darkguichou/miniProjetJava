@@ -7,9 +7,7 @@ public class DispositifAcquisition extends Article {
 	private String resolutionVideo;
 	private int nbMPixel;
 	 
-	//Constructeurs
-	
-	
+	//Constructeurs	
 	public DispositifAcquisition(String TypeObjectif,String resolutionVideo,int nbMPixel,String reference,String marque,String intitule,float prixLocJour,int nbStock){
 		super(reference,marque,intitule,prixLocJour,nbStock);
 		this.TypeObjectif=TypeObjectif;
