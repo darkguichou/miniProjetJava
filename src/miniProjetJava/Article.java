@@ -11,7 +11,13 @@ public class Article {
 	
 	
 	
-	
+	public Article(String reference, String marque, String intitule, float prixLocJour, int nbStock){
+		
+		
+		
+		
+		
+	}
 	
 	
 	
