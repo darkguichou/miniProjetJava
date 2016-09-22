@@ -5,11 +5,8 @@ public class PanneauxLed extends Lumiere {
 	private int nbLed;
 	
 	//Constructeurs
-	public PanneauxLed(){
-		nbLed=0;
-	}
-	
-	public PanneauxLed(int nbLed){
+	public PanneauxLed(int nbLed,double largeur,double hauteur,String reference,String marque,String intitule,float prixLocJour,int nbStock){
+		super(largeur,hauteur,reference,marque,intitule,prixLocJour,nbStock);
 		this.nbLed=nbLed;
 	}
 	
