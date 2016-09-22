@@ -76,12 +76,13 @@ public class Magasin {
 
 	}
 
-	public void calculerTotal(Date dateDebut, Date dateFin){
-
-
-		
-		
-
+	public float calculerTotal(LocalDate dateDebut, LocalDate dateFin){
+		float montant=0;
+		for (Location l : locations){
+			if(l.getDateDebut().isAfter(dateDebut)&& l.getDateFin().isBefore(dateFin))
+			montant+= l.calculerMontant();			
+		}		
+		return montant;
 	}
 
 
