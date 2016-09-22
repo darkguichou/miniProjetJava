@@ -5,6 +5,7 @@ public class Lumiere extends Article {
 	protected double largeur;
 	protected double hauteur;
 	
+
 	//Constructeurs
 	public Lumiere(double largeur,double hauteur,String reference,String marque,String intitule,float prixLocJour,int nbStock){
 		super(reference, marque, intitule, prixLocJour, nbStock);
@@ -12,7 +13,7 @@ public class Lumiere extends Article {
 		this.hauteur=hauteur;
 	}
 	
-	//Méthodes
+	//Mï¿½thodes
 	public void setHauteur(double hauteur) {
 		this.hauteur = hauteur;
 	}
