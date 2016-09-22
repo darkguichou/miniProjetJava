@@ -4,12 +4,17 @@ public class Son {
 //Attributs
 	private double decibel;
 	
-	//Constructeurs
-	public Son(){
-		decibel=0;
-	}
-	
+	//Constructeur
 	public Son(double decibel){
 		this.decibel=decibel;
+	}
+	
+	//Méthodes
+	public void setDecibel(double decibel) {
+		this.decibel = decibel;
+	}
+	
+	public double getDecibel() {
+		return decibel;
 	}
 }
