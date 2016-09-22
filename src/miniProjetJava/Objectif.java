@@ -9,7 +9,8 @@ public class Objectif extends Article {
 	//Constructeur
 	public Objectif(Set<String> listeModeles,String reference, String marque, String intitule, float prixLocJour, int nbStock){
 		super( reference,marque,intitule,prixLocJour,nbStock);
-		listeModeles=new TreeSet<String>();
+		//listeModeles=new TreeSet<String>();
+		this.listeModeles=listeModeles;
 	}
 	
 	//Methode
@@ -28,8 +29,8 @@ public class Objectif extends Article {
 	
 	public void afficher(){
 		for(String num : listeModeles)
-		{//Affichage de tous els modèles
-			System.out.print(num+" ;");
+		{//Affichage de tous les modèles
+			System.out.print(num+" / ");
 		}
 	}
 	
@@ -39,6 +40,19 @@ public class Objectif extends Article {
 	
 	public Set<String> getListeModeles() {
 		return listeModeles;
+	}
+	
+	public static void main(String args[]){
+		Set<String> modele= new TreeSet<String>();
+		Objectif O1= new Objectif(modele, "Unereference", "uneMarque", "L'intitule", 120, 3);
+		
+		O1.ajoutModele("unModele");
+		O1.ajoutModele("UnAutreModele");
+		O1.ajoutModele("unAutreModeledifferent");
+		O1.ajoutModele("unModele");
+		O1.afficher();
+		O1.retirerModele("unModele");
+		O1.afficher();
 	}
 
 }
