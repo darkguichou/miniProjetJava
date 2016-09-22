@@ -1,6 +1,11 @@
 package miniProjetJava;
 
 import java.util.Date;
+
+import sun.util.resources.LocaleData;
+
+import java.time.LocalDate;
+import java.time.chrono.ChronoLocalDate;
 import java.util.ArrayList;
 
 public class Magasin {
@@ -50,13 +55,13 @@ public class Magasin {
 
 	public void afficherLocEnCours(Client client){
 
-		Date dateToday = new Date();
+		LocalDate dateToday = LocalDate.now();
 
 		for (Location location : locations) {
 
 			if (location.getClient() == client){
 
-				if (location.getDateFin().after( dateToday )){
+				if (location.getDateFin().isAfter( dateToday )){
 
 
 					location.afficher();
@@ -74,8 +79,8 @@ public class Magasin {
 	public void calculerTotal(Date dateDebut, Date dateFin){
 
 
-
-
+		
+		
 
 	}
 
