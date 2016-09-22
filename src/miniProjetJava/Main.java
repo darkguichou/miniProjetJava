@@ -1,6 +1,7 @@
 package miniProjetJava;
 
 import java.util.Date;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Main {
@@ -29,12 +30,14 @@ public class Main {
 		
 		System.out.println(article1.getNbStock() + " " + article2.getNbStock() );
 		
-		@SuppressWarnings("deprecation")
-		Location location = new Location(new Date(2016, 9, 1), new Date(2016, 9, 12), articles, client);
+		
+		
+		
+		Location location = new Location(LocalDate.of(2016, 9, 1),LocalDate.of(2016, 12, 1) , articles, client);
 		magasin.enregistrerLoc(location);
 		System.out.println(article1.getNbStock() + " " + article2.getNbStock() );
 		magasin.afficherLocEnCours(client);
-		location.restitution();
+		//location.restitution();
 		System.out.println(article1.getNbStock() + " " + article2.getNbStock() );
 		
 		
