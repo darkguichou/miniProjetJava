@@ -58,6 +58,36 @@ public class Magasin {
 		
 		
 	}
+
+
+	public ArrayList<Article> getArticles() {
+		return articles;
+	}
+
+
+	public void setArticles(ArrayList<Article> articles) {
+		this.articles = articles;
+	}
+
+
+	public ArrayList<Client> getClients() {
+		return clients;
+	}
+
+
+	public void setClients(ArrayList<Client> clients) {
+		this.clients = clients;
+	}
+
+
+	public ArrayList<Location> getLocations() {
+		return locations;
+	}
+
+
+	public void setLocations(ArrayList<Location> locations) {
+		this.locations = locations;
+	}
 	
 	
 }

@@ -27,6 +27,7 @@ public class Main {
 		
 		
 		Magasin magasin = new Magasin(articles, clients);
+		magasin.afficherArticleDispo();
 		
 	}
 	
