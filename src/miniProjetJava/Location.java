@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import java.io.DataOutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -37,7 +38,7 @@ public class Location {
 
 
 	@SuppressWarnings("deprecation")
-	public void restitution() throws FileNotFoundException{
+	public void restitution() throws IOException{
 
 		for (Article article : articles) {
 			
@@ -60,6 +61,9 @@ public class Location {
 		
 		DataOutputStream dataOutputStream = new DataOutputStream( new FileOutputStream (Integer.toString(dateFin.getYear()) + numMois + ".log"));
 		
+		
+		dataOutputStream.writeUTF(dateDebut + " - "  + dateFin + " - " + client);
+		 
 
 
 	}
