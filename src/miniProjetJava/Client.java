@@ -8,11 +8,11 @@ public class Client {
 	private String adresse;
 	
 	
-	public Client(){
+	public Client(String nom, String prenom, String addresse){
 		
 		this.nom = nom;
 		this.prenom = prenom;
-		this.adresse = adresse;
+		this.adresse = addresse;
 		
 		
 	}

@@ -5,18 +5,18 @@ public class Lumiere extends Article {
 	protected double largeur;
 	protected double hauteur;
 	
-	//Constructeurs
-	public Lumiere(){
-		largeur=0;
-		hauteur=0;
-	}
+//	//Constructeurs
+//	public Lumiere(){
+//		largeur=0;
+//		hauteur=0;
+//	}
+//	
+//	public Lumiere(double largeur,double hauteur){
+//		this.largeur=largeur;
+//		this.hauteur=hauteur;
+//	}
 	
-	public Lumiere(double largeur,double hauteur){
-		this.largeur=largeur;
-		this.hauteur=hauteur;
-	}
-	
-	//Méthodes
+	//Mï¿½thodes
 	public void setHauteur(double hauteur) {
 		this.hauteur = hauteur;
 	}

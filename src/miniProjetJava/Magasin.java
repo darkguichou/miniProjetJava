@@ -13,11 +13,10 @@ public class Magasin {
 	
 	
 	
-	public Magasin(ArrayList<Article> articles, ArrayList<Client> clients, ArrayList<Location> locations){
+	public Magasin(ArrayList<Article> articles, ArrayList<Client> clients){
 		
 		this.articles = articles;
 		this.clients = clients;
-		this.locations = locations;
 		
 		
 	}
