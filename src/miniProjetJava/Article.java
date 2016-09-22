@@ -11,6 +11,18 @@ public class Article {
 	
 	
 	
+	public Article(String reference, String marque, String intitule, float prixLocJour, int nbStock){
+		
+		
+		this.reference = reference;
+		this.marque = marque;
+		this.intitule = intitule;
+		this.prixLocJour = prixLocJour;
+		this.nbStock = nbStock;
+		
+		
+	}
+	
 	
 	
 }
