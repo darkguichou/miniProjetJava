@@ -1,6 +1,6 @@
 package miniProjetJava;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.ArrayList;
 
 public class Location {
@@ -48,6 +48,14 @@ public class Location {
 
 		return 0;
 
+	}
+	
+	
+
+		
+	public void afficher(){
+		
+		System.out.println("Date de début: " + dateDebut + "Date de fin: " + dateFin);
 	}
 
 
