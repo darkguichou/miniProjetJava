@@ -71,11 +71,17 @@ public class Magasin {
 
 	}
 
-	public void calculerTotal(Date dateDebut, Date dateFin){
+	public float calculerTotal(Date dateDebut, Date dateFin){
+		for (Location l : locations){
+			//if(l.getDateDebut().)
+			for(Article article : articles){
+				
+			}
+				
+		}
+		
 
-
-
-
+return 0;
 
 	}
 

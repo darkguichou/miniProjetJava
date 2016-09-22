@@ -14,7 +14,7 @@ public class Objectif extends Article {
 	}
 	
 	//Methode
-	public void ajoutModele(String modele){
+	public void ajouterModele(String modele){
 		//Ajout du modele
 		listeModeles.add(modele);
 	}
@@ -46,10 +46,10 @@ public class Objectif extends Article {
 		Set<String> modele= new TreeSet<String>();
 		Objectif O1= new Objectif(modele, "Unereference", "uneMarque", "L'intitule", 120, 3);
 		
-		O1.ajoutModele("unModele");
-		O1.ajoutModele("UnAutreModele");
-		O1.ajoutModele("unAutreModeledifferent");
-		O1.ajoutModele("unModele");
+		O1.ajouterModele("unModele");
+		O1.ajouterModele("UnAutreModele");
+		O1.ajouterModele("unAutreModeledifferent");
+		O1.ajouterModele("unModele");
 		O1.afficher();
 		O1.retirerModele("unModele");
 		O1.afficher();
