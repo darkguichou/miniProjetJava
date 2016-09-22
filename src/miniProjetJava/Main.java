@@ -1,5 +1,6 @@
 package miniProjetJava;
 
+import java.sql.Date;
 import java.util.ArrayList;
 
 public class Main {
@@ -14,6 +15,8 @@ public class Main {
 		
 		
 		
+		
+		
 		ArrayList<Article> articles = new ArrayList<Article>();
 		ArrayList<Client>  clients = new ArrayList<Client>();
 		
@@ -22,11 +25,16 @@ public class Main {
 		
 		clients.add(client);
 		
-		
-		
+		System.out.println(article1.getNbStock() + " " + article2.getNbStock() );
+		@SuppressWarnings("deprecation")
+		Location location = new Location(new Date(2016, 9, 12), new Date(2016, 24, 12), articles, client);
+		System.out.println(article1.getNbStock() + " " + article2.getNbStock() );
+		location.restitution();
+		System.out.println(article1.getNbStock() + " " + article2.getNbStock() );
 		
 		
 		Magasin magasin = new Magasin(articles, clients);
+		magasin.afficherArticleDispo();
 		
 	}
 	

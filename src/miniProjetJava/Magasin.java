@@ -30,6 +30,9 @@ public class Magasin {
 			System.out.println("Marque: " + article.marque);
 			System.out.println("Intitulé: " + article.intitule);
 			System.out.println("Prix par jour de location: " + article.prixLocJour);
+			System.out.println("\n");
+			System.out.println("<------------------------------------------------------>");
+			System.out.println("\n");
 		}
 		
 		
@@ -57,6 +60,36 @@ public class Magasin {
 		
 		
 		
+	}
+
+
+	public ArrayList<Article> getArticles() {
+		return articles;
+	}
+
+
+	public void setArticles(ArrayList<Article> articles) {
+		this.articles = articles;
+	}
+
+
+	public ArrayList<Client> getClients() {
+		return clients;
+	}
+
+
+	public void setClients(ArrayList<Client> clients) {
+		this.clients = clients;
+	}
+
+
+	public ArrayList<Location> getLocations() {
+		return locations;
+	}
+
+
+	public void setLocations(ArrayList<Location> locations) {
+		this.locations = locations;
 	}
 	
 	

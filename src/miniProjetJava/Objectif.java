@@ -40,4 +40,5 @@ public class Objectif extends Article {
 	public Set<String> getListeModeles() {
 		return listeModeles;
 	}
+
 }

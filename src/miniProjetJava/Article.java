@@ -22,6 +22,66 @@ public class Article {
 		
 		
 	}
+
+
+
+	public String getReference() {
+		return reference;
+	}
+
+
+
+	public void setReference(String reference) {
+		this.reference = reference;
+	}
+
+
+
+	public String getMarque() {
+		return marque;
+	}
+
+
+
+	public void setMarque(String marque) {
+		this.marque = marque;
+	}
+
+
+
+	public String getIntitule() {
+		return intitule;
+	}
+
+
+
+	public void setIntitule(String intitule) {
+		this.intitule = intitule;
+	}
+
+
+
+	public float getPrixLocJour() {
+		return prixLocJour;
+	}
+
+
+
+	public void setPrixLocJour(float prixLocJour) {
+		this.prixLocJour = prixLocJour;
+	}
+
+
+
+	public int getNbStock() {
+		return nbStock;
+	}
+
+
+
+	public void setNbStock(int nbStock) {
+		this.nbStock = nbStock;
+	}
 	
 	
 	
