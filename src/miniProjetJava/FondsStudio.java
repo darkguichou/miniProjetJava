@@ -1,5 +1,5 @@
 package miniProjetJava;
 
-public class FondsStudio {
+public class FondsStudio extends Lumiere {
 
 }

@@ -1,5 +1,5 @@
 package miniProjetJava;
 
-public class Reflecteur {
+public class Reflecteur extends Lumiere {
 
 }
