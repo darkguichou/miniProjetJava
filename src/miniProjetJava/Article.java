@@ -24,7 +24,6 @@ public class Article {
 	}
 
 
-
 	public String getReference() {
 		return reference;
 	}

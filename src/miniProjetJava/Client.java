@@ -13,11 +13,17 @@ public class Client {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.adresse = addresse;
-		
-		
+				
 	}
 
-
+	public boolean equals (Object o){
+		if(o instanceof Client){
+			Client c=(Client) o;
+			return(this.nom.equalsIgnoreCase(c.nom)&&(this.prenom.equalsIgnoreCase(c.prenom)&&(this.adresse.equalsIgnoreCase(c.adresse))));
+		}
+		return super.equals(o);
+	}
+	
 	public String getNom() {
 		return nom;
 	}
