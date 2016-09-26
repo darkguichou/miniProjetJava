@@ -2,7 +2,7 @@ package miniProjetJava;
 
 public class Article {
 
-	
+	//Attributs
 	protected String reference;
 	protected String marque;
 	protected String intitule;
@@ -10,7 +10,7 @@ public class Article {
 	protected int nbStock;
 	
 	
-	
+	//Constructeur
 	public Article(String reference, String marque, String intitule, float prixLocJour, int nbStock){
 		
 		
@@ -23,7 +23,7 @@ public class Article {
 		
 	}
 
-
+	//Méthode
 	public String getReference() {
 		return reference;
 	}

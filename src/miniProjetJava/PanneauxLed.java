@@ -10,7 +10,7 @@ public class PanneauxLed extends Lumiere {
 		this.nbLed=nbLed;
 	}
 	
-	//Méthodes
+	//MÃ©thodes
 	public void setNbLed(int nbLed) {
 		this.nbLed = nbLed;
 	}

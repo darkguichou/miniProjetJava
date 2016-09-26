@@ -9,7 +9,7 @@ public class Son {
 		this.decibel=decibel;
 	}
 	
-	//Méthodes
+	//MÃ©thodes
 	public void setDecibel(double decibel) {
 		this.decibel = decibel;
 	}
