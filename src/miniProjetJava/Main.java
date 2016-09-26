@@ -1,6 +1,7 @@
 package miniProjetJava;
 
 import java.util.Date;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -37,7 +38,12 @@ public class Main {
 		magasin.enregistrerLoc(location);
 		System.out.println(article1.getNbStock() + " " + article2.getNbStock() );
 		magasin.afficherLocEnCours(client);
-		//location.restitution();
+		try {
+			location.restitution();
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
 		System.out.println(article1.getNbStock() + " " + article2.getNbStock() );
 		
 		

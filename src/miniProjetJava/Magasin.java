@@ -48,6 +48,7 @@ public class Magasin {
 	public void enregistrerLoc(Location location){
 
 		locations.add(location);
+		
 
 
 	}

@@ -32,38 +32,57 @@ public class Location {
 
 				article.setNbStock(article.getNbStock() - 1);
 			}
-			
+
 		}
 	}
 
 
-	@SuppressWarnings("deprecation")
+
 	public void restitution() throws IOException{
 
 		for (Article article : articles) {
-			
+
 			article.setNbStock(article.getNbStock() + 1);
 		}
-		
+
 		String numMois = "";
-		
+
 		if (dateFin.getMonth().getValue() < 10){
-			
-			
-			 numMois = "0" + dateFin.getMonth(); 
-			
+
+
+			numMois = "0" + dateFin.getMonth(); 
+
 		} else {
+
+
+			numMois = Integer.toString(dateFin.getMonth().getValue());
+
+		}
+
+		DataOutputStream dataOutputStream = new DataOutputStream( new FileOutputStream (Integer.toString(dateFin.getYear()) + numMois + ".loc"));
+
+
+		dataOutputStream.writeUTF("\n" + dateDebut 
+				+ " - "  
+				+ dateFin 
+				+ " - " 
+				+ client.getNom().toUpperCase() 
+				+ " " + client.getPrenom() 
+				+ " " + calculerMontant()
+				+ "€"
+				);
+		
+		dataOutputStream.writeUTF("\n \n Liste des articles: \n");
+
+		for (Article article : articles) {
 			
-			
-			 numMois = Integer.toString(dateFin.getMonth().getValue());
-			
+			System.out.println("salut");
+			dataOutputStream.writeUTF("\n" + article.getReference() + " " + article.getIntitule() + " " + article.prixLocJour);
+		
 		}
 		
-		DataOutputStream dataOutputStream = new DataOutputStream( new FileOutputStream (Integer.toString(dateFin.getYear()) + numMois + ".log"));
-		
-		
-		dataOutputStream.writeUTF(dateDebut + " - "  + dateFin + " - " + client);
-		 
+		dataOutputStream.writeUTF("\n <----------------------------------------->");
+		dataOutputStream.close(); 
 
 
 	}
@@ -72,24 +91,24 @@ public class Location {
 	public float calculerMontant(){
 
 		float montant = 0;
-		
+
 		long diff = dateFin.getDayOfYear() - dateDebut.getDayOfYear() + 1 ; 
-		
+
 
 		for (Article article : articles) {
-			
+
 			montant += article.prixLocJour * diff ;
 		}
-		
+
 		return montant;
 
 	}
-	
-	
 
-		
+
+
+
 	public void afficher(){
-		
+
 		System.out.println("Date de début: " + dateDebut + "Date de fin: " + dateFin + "Montant: " +this.calculerMontant());
 	}
 
