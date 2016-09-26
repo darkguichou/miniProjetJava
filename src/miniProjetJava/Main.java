@@ -42,7 +42,7 @@ public class Main {
 		
 		
 	
-		magasin.afficherArticleDispo();
+		magasin.afficherArticleDispo(0);
 		
 	}
 	

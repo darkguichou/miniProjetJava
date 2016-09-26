@@ -28,17 +28,24 @@ public class Magasin {
 	}
 
 
-	public void afficherArticleDispo(){
+	public void afficherArticleDispo(int choix){
 
 		for (Article article : articles) {
-
-			System.out.println("Ref: " + article.reference);
-			System.out.println("Marque: " + article.marque);
-			System.out.println("Intitul√©: " + article.intitule);
-			System.out.println("Prix par jour de location: " + article.prixLocJour);
-			System.out.println("\n");
-			System.out.println("<------------------------------------------------------>");
-			System.out.println("\n");
+			switch (choix){
+			case 0:	System.out.println("Ref: " + article.reference);
+					System.out.println("Marque: " + article.marque);
+					System.out.println("Intitul√©: " + article.intitule);
+					System.out.println("Prix par jour de location: " + article.prixLocJour);
+					System.out.println("\n");
+					System.out.println("<------------------------------------------------------>");
+					System.out.println("\n");break;
+			case 1: System.out.println("RÈf : "+article.reference);break;
+			case 2: System.out.println("Marque : "+article.marque);break;
+			case 3: System.out.println("IntitulÈ : "+article.intitule);break;
+			case 4: System.out.println("Prix par jour de location : "+article.prixLocJour);break;
+			default: System.out.println("Erreur de saisi.");
+			}
+			
 		}
 
 
@@ -65,12 +72,8 @@ public class Magasin {
 
 
 					location.afficher();
-
-
 				}
-
 			}
-
 		}
 
 
