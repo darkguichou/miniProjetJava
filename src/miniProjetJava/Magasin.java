@@ -45,9 +45,21 @@ public class Magasin {
 	}
 
 
-	public void enregistrerLoc(Location location){
+	public void enregistrerLoc(){
 
-		locations.add(location);
+		
+		int an = 1;
+		int mois = 1;
+		int jour = 1;
+		
+		System.out.println("Année de départ de la location");
+		an = scanner.nextInt();
+		System.out.println("Mois de départ de la location");
+		mois = scanner.nextInt();
+		System.out.println("Jour de départ de la location");
+		jour = scanner.nextInt();
+		
+		locations.add();
 		
 
 
