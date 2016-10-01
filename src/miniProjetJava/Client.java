@@ -2,12 +2,12 @@ package miniProjetJava;
 
 public class Client {
 	
-	
+	//Attriuts
 	private String nom;
 	private String prenom;
 	private String adresse;
 	
-	
+	//Constructeur
 	public Client(String nom, String prenom, String addresse){
 		
 		this.nom = nom;
@@ -15,7 +15,8 @@ public class Client {
 		this.adresse = addresse;
 				
 	}
-
+//Methode
+	//Comparaison avec les attributs d'un objet
 	public boolean equals (Object o){
 		if(o instanceof Client){
 			Client c=(Client) o;

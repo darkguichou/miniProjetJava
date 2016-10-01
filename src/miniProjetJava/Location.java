@@ -10,12 +10,12 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Location {
-
+//Attributs
 	private LocalDate dateDebut;
 	private LocalDate dateFin;
 	private Client client;
 	private ArrayList<Article> articles;
-
+//COnstructeurs
 	public Location (LocalDate dateDebut, LocalDate dateFin ,ArrayList<Article> articles, Client client){
 
 
@@ -25,7 +25,7 @@ public class Location {
 		this.articles = articles;
 
 
-
+// Retire un element dans le stock à chaque location crée
 		for (Article article : articles) {
 
 			if (article.getNbStock() > 0){
@@ -37,7 +37,8 @@ public class Location {
 	}
 
 
-
+//Méthodes
+	//Archivage des locations lors de la restitution
 	public void restitution() throws IOException{
 
 		for (Article article : articles) {
@@ -87,7 +88,7 @@ public class Location {
 
 	}
 
-
+//Calcul du montant d'une location effectué
 	public float calculerMontant(){
 
 		float montant = 0;
@@ -106,7 +107,7 @@ public class Location {
 
 
 
-
+//Affichage d'une location
 	public void afficher(){
 
 		System.out.println("Date de début: " + dateDebut + "Date de fin: " + dateFin + "Montant: " +this.calculerMontant());

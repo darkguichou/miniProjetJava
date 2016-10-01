@@ -1,12 +1,6 @@
 package miniProjetJava;
 
-import java.util.Date;
-import java.util.Scanner;
-
-import com.sun.org.apache.xalan.internal.xsltc.compiler.sym;
-
 import sun.util.resources.LocaleData;
-
 import java.time.LocalDate;
 import java.time.chrono.ChronoLocalDate;
 import java.util.ArrayList;
@@ -14,13 +8,13 @@ import java.util.ArrayList;
 public class Magasin {
 
 
-
+//Attributs
 	private ArrayList<Article> articles;
 	private ArrayList<Client> clients;
 	private ArrayList<Location> locations;
 
 
-
+//Constructeur
 	public Magasin(ArrayList<Article> articles, ArrayList<Client> clients){
 
 		this.articles = articles;
@@ -30,9 +24,9 @@ public class Magasin {
 
 	}
 
-
+//Méthodes
 	public void afficherArticleDispo(int choix){
-
+//Affichage des articles proposés selon le choix de l'utilisateur(tout,reference,marque,intitulé,prix)
 		for (Article article : articles) {
 			switch (choix){
 			case 0:	System.out.println("Ref: " + article.reference);
@@ -54,7 +48,7 @@ public class Magasin {
 
 	}
 
-
+//Enregistrement de chaque locationde matériel conclue
 	public void enregistrerLoc(Location location){
 
 
@@ -65,15 +59,15 @@ public class Magasin {
 
 	}
 
-
+//Affichage de l'ensemble des locations en cours pour un client donnée
 	public void afficherLocEnCours(Client client){
 
 		LocalDate dateToday = LocalDate.now();
 
 		for (Location location : locations) {
-
+			//Vérifie que le client existe
 			if (location.getClient().equals(client) ){
-
+				//Verifie que la location n'est pas finie
 				if (location.getDateFin().isAfter( dateToday )){
 
 
@@ -84,11 +78,12 @@ public class Magasin {
 
 
 	}
-
+//Calcul du montant total des recettes sur une période donnée
 	public float calculerTotal(LocalDate dateDebut, LocalDate dateFin){
 		float montant=0;
 		for (Location l : locations){
 			if(l.getDateDebut().isAfter(dateDebut)&& l.getDateFin().isBefore(dateFin))
+				//Calcul du montant pour chaque location compris dans l'intervalle de temps
 			montant+= l.calculerMontant();			
 		}		
 		return montant;

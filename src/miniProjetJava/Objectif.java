@@ -9,7 +9,6 @@ public class Objectif extends Article {
 	//Constructeur
 	public Objectif(Set<String> listeModeles,String reference, String marque, String intitule, float prixLocJour, int nbStock){
 		super( reference,marque,intitule,prixLocJour,nbStock);
-		//listeModeles=new TreeSet<String>();
 		this.listeModeles=listeModeles;
 	}
 	
@@ -29,7 +28,7 @@ public class Objectif extends Article {
 	
 	public void afficher(){
 		for(String num : listeModeles)
-		{//Affichage de tous les modèles
+		{//Affichage de tous les modÃ¨les
 			System.out.print(num+" / ");
 		}
 	}
