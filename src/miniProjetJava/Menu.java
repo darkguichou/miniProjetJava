@@ -9,6 +9,17 @@ import com.sun.org.apache.xalan.internal.xsltc.compiler.sym;
 public class Menu {
 	
 	
+	private Magasin magasin;
+	
+	
+	
+	public Menu(Magasin magasin){
+		
+		
+		this.magasin = magasin;
+		
+	}
+	
 	public void afficherMenu() {
 
 		
@@ -23,7 +34,26 @@ public class Menu {
 
 	}
 	
-	public Location saisirLocation(Magasin magasin){
+	
+	public void AfficherArticle(){
+		
+		int choix = 0;
+
+		
+		System.out.println("Veuillez indiquer le tri à effectuer: \n");
+		System.out.println("1 - Tri par référence.\n");
+		System.out.println("2 - Tri par marque. \n");
+		System.out.println("3 - Tri par intitule. \n");
+		System.out.println("4 - Tri par prix de la location par jour.\n");
+		
+		Scanner scanner = new Scanner(System.in);
+		choix = scanner.nextInt();
+		
+		magasin.afficherArticleDispo(choix);
+		
+	}
+	
+	public Location saisirLocation(){
 		
 		
 		
@@ -60,7 +90,7 @@ public class Menu {
 			System.out.println("Entrez la référence d'un article");
 			String ref = scanner.next();
 			articles.add(magasin.articleParRef(ref));
-			System.out.println("Entrez '1' pour continuer la saisie");
+			System.out.println("Entrez '1' pour continuer la saisie et toute autre touche pour arréter la saisie");
 			
 			
 		}
@@ -110,17 +140,32 @@ public class Menu {
 			}
 			
 			
+		
+		
+			
+			
 		}
 		
-		System.out.println("Le client est-il déjà enregistré? (entrez 'oui' ou 'non'");
 		
-
 		
 		Location location = new Location(dateDebut, dateFin, articles, client);
 		
 		
 		
 		return location;
+	}
+	
+	
+	
+	public void afficherLocations(){
+		
+		String nom;
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Veuillez entrer le nom du client:");
+		
+		nom = scanner.next();
+		
 	}
 	
 	

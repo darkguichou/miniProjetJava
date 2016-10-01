@@ -4,6 +4,7 @@ import sun.util.resources.LocaleData;
 import java.time.LocalDate;
 import java.time.chrono.ChronoLocalDate;
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class Magasin {
 
@@ -27,21 +28,32 @@ public class Magasin {
 //Méthodes
 	public void afficherArticleDispo(int choix){
 //Affichage des articles proposés selon le choix de l'utilisateur(tout,reference,marque,intitulé,prix)
-		for (Article article : articles) {
-			switch (choix){
-			case 0:	System.out.println("Ref: " + article.reference);
+		
+		
+		ArrayList<Article> articlesTries = articles;
+		
+		switch (choix) {
+		case 1: articlesTries.sort(new CompareRef()); break;
+		case 2: articlesTries.sort(new CompareMarque()); break;
+		case 3: articlesTries.sort(new CompareIntitule()); break;
+		case 4: articlesTries.sort(new ComparePrix()); break;
+		default: articlesTries.sort(new CompareRef()); break;
+		}
+		
+		
+		for (Article article : articlesTries) {
+			
+			
+			
+
+					System.out.println("Ref: " + article.reference);
 					System.out.println("Marque: " + article.marque);
 					System.out.println("Intitulé: " + article.intitule);
 					System.out.println("Prix par jour de location: " + article.prixLocJour);
 					System.out.println("\n");
 					System.out.println("<------------------------------------------------------>");
 					System.out.println("\n");break;
-			case 1: System.out.println("Réf : "+article.reference);break;
-			case 2: System.out.println("Marque : "+article.marque);break;
-			case 3: System.out.println("Intitulé : "+article.intitule);break;
-			case 4: System.out.println("Prix par jour de location : "+article.prixLocJour);break;
-			default: System.out.println("Erreur de saisi.");
-			}
+			
 			
 		}
 

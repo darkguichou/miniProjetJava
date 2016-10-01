@@ -10,7 +10,7 @@ public class Main {
 
 	public static void main(String args[]){
 		
-		Menu menu = new Menu();
+
 
 
 		Article article1 = new Article("d0001", "Cannon", "Cannon v145", 12, 10);
@@ -31,6 +31,8 @@ public class Main {
 		clients.add(client);
 
 		Magasin magasin = new Magasin(articles, clients);
+		
+		Menu menu = new Menu(magasin);
 
 		Scanner scanner = new Scanner(System.in);
 
@@ -46,13 +48,15 @@ public class Main {
 			
 			switch (choix) {
 			
-			case 1: magasin.afficherArticleDispo(0); break;
+			case 1: menu.AfficherArticle(); break;
 			
-			case 2: menu.saisirLocation(magasin);
+			case 2: menu.saisirLocation(); break;
+			
+			case 3: menu.afficherLocations(); break;
 				
 				
 				
-				;
+				
 			default:
 				break;
 			}
