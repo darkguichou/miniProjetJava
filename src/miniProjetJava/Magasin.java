@@ -1,6 +1,9 @@
 package miniProjetJava;
 
 import java.util.Date;
+import java.util.Scanner;
+
+import com.sun.org.apache.xalan.internal.xsltc.compiler.sym;
 
 import sun.util.resources.LocaleData;
 
@@ -52,21 +55,11 @@ public class Magasin {
 	}
 
 
-	public void enregistrerLoc(){
+	public void enregistrerLoc(Location location){
+
 
 		
-		int an = 1;
-		int mois = 1;
-		int jour = 1;
-		
-		System.out.println("Année de départ de la location");
-		an = scanner.nextInt();
-		System.out.println("Mois de départ de la location");
-		mois = scanner.nextInt();
-		System.out.println("Jour de départ de la location");
-		jour = scanner.nextInt();
-		
-		locations.add();
+		locations.add(location);
 		
 
 
@@ -102,6 +95,44 @@ public class Magasin {
 	}
 
 
+	public Article articleParRef(String ref){
+		
+		Article res = null;
+		
+		for (Article article : articles) {
+			
+			if (article.getReference() == ref){
+				
+				res = article;
+				
+			}
+			
+		}
+		
+		
+		
+		return res;
+		
+	}
+	
+	
+	public Client clientParNomPrenom (String nom, String prenom){
+		
+		Client res = null;
+		
+		for (Client client : clients) {
+			
+			if (client.getNom() == nom && client.getPrenom() == prenom){
+				
+				res = client;
+				
+			}
+			
+		}
+		
+		return res;
+	}
+	
 	public ArrayList<Article> getArticles() {
 		return articles;
 	}
