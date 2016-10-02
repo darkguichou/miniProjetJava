@@ -1,10 +1,7 @@
 package miniProjetJava;
 
-import sun.util.resources.LocaleData;
 import java.time.LocalDate;
-import java.time.chrono.ChronoLocalDate;
 import java.util.ArrayList;
-import java.util.Comparator;
 
 public class Magasin {
 
@@ -45,14 +42,13 @@ public class Magasin {
 			
 			
 			
-
 					System.out.println("Ref: " + article.reference);
 					System.out.println("Marque: " + article.marque);
 					System.out.println("Intitulé: " + article.intitule);
 					System.out.println("Prix par jour de location: " + article.prixLocJour);
 					System.out.println("\n");
 					System.out.println("<------------------------------------------------------>");
-					System.out.println("\n");break;
+					System.out.println("\n");
 			
 			
 		}
@@ -80,6 +76,7 @@ public class Magasin {
 			//Vérifie que le client existe
 			if (location.getClient().equals(client) ){
 				//Verifie que la location n'est pas finie
+				System.out.println("trouvé");
 				if (location.getDateFin().isAfter( dateToday )){
 
 
@@ -108,7 +105,7 @@ public class Magasin {
 		
 		for (Article article : articles) {
 			
-			if (article.getReference() == ref){
+			if (article.getReference().equals(ref)){
 				
 				res = article;
 				
@@ -117,7 +114,7 @@ public class Magasin {
 		}
 		
 		
-		
+		System.out.println(res);
 		return res;
 		
 	}
@@ -129,7 +126,7 @@ public class Magasin {
 		
 		for (Client client : clients) {
 			
-			if (client.getNom() == nom && client.getPrenom() == prenom){
+			if (client.getNom().equals(nom) && client.getPrenom().equals(prenom)){
 				
 				res = client;
 				
@@ -139,6 +136,29 @@ public class Magasin {
 		
 		return res;
 	}
+	
+	
+	public Location locationParId(int id){
+		
+		Location res = null;
+		
+		for (Location location : locations) {
+			
+			
+			if (location.getId() == id){
+				
+				
+				res = location;
+				
+			}
+			
+		}
+		
+		return res;
+	}
+	
+	
+	
 	
 	public ArrayList<Article> getArticles() {
 		return articles;

@@ -11,10 +11,12 @@ import java.util.ArrayList;
 
 public class Location {
 //Attributs
+	private int id;
 	private LocalDate dateDebut;
 	private LocalDate dateFin;
 	private Client client;
 	private ArrayList<Article> articles;
+	
 //COnstructeurs
 	public Location (LocalDate dateDebut, LocalDate dateFin ,ArrayList<Article> articles, Client client){
 
@@ -23,6 +25,8 @@ public class Location {
 		this.dateFin = dateFin;
 		this.client = client;
 		this.articles = articles;
+		this.id = Main.id;
+		Main.id++;
 
 
 // Retire un element dans le stock à chaque location crée
@@ -63,7 +67,7 @@ public class Location {
 		DataOutputStream dataOutputStream = new DataOutputStream( new FileOutputStream (Integer.toString(dateFin.getYear()) + numMois + ".loc"));
 
 
-		dataOutputStream.writeUTF("\n" + dateDebut 
+		dataOutputStream.writeUTF("\n" + "id: "+ id + "  " + dateDebut 
 				+ " - "  
 				+ dateFin 
 				+ " - " 
@@ -153,6 +157,14 @@ public class Location {
 		this.articles = articles;
 	}
 
-
+	
+	public int getId() {
+		return id;
+	}		
+		
+		
+		
+	
+	
 
 }
